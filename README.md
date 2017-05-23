@@ -1,4 +1,4 @@
-#Protractos
+Protractorjs
 
 Follow these steps to run tests:
 
