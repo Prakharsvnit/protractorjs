@@ -6,6 +6,7 @@ browser.waitForAngularEnabled(false);
     });
 
     it('should click DEVELOP button', function(){   
-       element.all( by.css('li .dropdown-toggle')).get(1).click(); 
+     var developButton = element.all( by.css('li .dropdown-toggle')).get(1);
+     developButton.click();
     });
 });
