@@ -11,10 +11,12 @@ browser.waitForAngularEnabled(false);
      var api = element(by.xpath('//*[@id="navbar-main"]/div/div/ul/li[2]/ul/li[2]/a'));
      api.click();
 
-     var box = element(by.css('.search-query'));
+     var box = element(by.css('.search-query')).clear().sendKeys("Filter");
      box.clear().sendKeys("Filter");
 
-     var filter = element.all(by.css('.ng-binding')).get(0);
+     browser.debugger();
+     
+     var filter = element(by.css('.search-results-container')).all(by.css('[ng-click="hideResults()"]')).get(0);
      filter.click();
 
     });
